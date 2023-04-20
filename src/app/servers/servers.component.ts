@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent {
+  public serverCreated: boolean = false;
   public allowNewServer = false;
   public serverName: any = 'Test Server';
 
   public onCreateServer() {
-    alert('Server created');
+    this.serverCreated = true;
   }
 
   public onUpdateServerName(e: any) {
